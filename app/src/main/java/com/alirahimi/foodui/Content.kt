@@ -14,6 +14,9 @@ fun Content(scrollState: LazyListState) {
     ) {
         item {
             BasicInformation()
+            Description()
+            ServingNumber()
+            ShoppingListButton()
         }
     }
 }
