@@ -25,7 +25,6 @@ fun Content(scrollState: LazyListState) {
             SimilarRecipesHeader()
             SimilarRecipes()
 
-
         }
     }
 }

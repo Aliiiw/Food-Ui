@@ -37,7 +37,5 @@ fun CircularButton(
             painter = painterResource(id = iconResource),
             contentDescription = ""
         )
-
     }
-
 }

@@ -55,9 +55,7 @@ fun RecipeItem(
                     contentDescription = "",
                     modifier = Modifier.padding(8.dp)
                 )
-
             }
-
         }
 
         Column(
@@ -104,8 +102,6 @@ fun RecipeItem(
                     fontSize = 16.sp,
                 )
             }
-
-
         }
 
         Column(
@@ -117,7 +113,6 @@ fun RecipeItem(
             Icon(
                 painter = painterResource(id = R.drawable.ic_arrow_right),
                 contentDescription = "")
-
 
         }
     }

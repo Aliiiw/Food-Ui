@@ -43,6 +43,5 @@ fun SimilarFoods() {
             description = "Cookies",
             price = "23$"
         )
-
     }
 }
