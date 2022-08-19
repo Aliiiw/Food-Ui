@@ -14,8 +14,10 @@ fun FoodScreen() {
     val scrollState = rememberLazyListState()
 
     Box {
-        ParallaxToolbar(scrollState)
+
         Content(scrollState = scrollState)
+        ParallaxToolbar(scrollState)
+
     }
 }
 

@@ -4,7 +4,6 @@ import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.res.painterResource
 
 @Composable
 fun Content(scrollState: LazyListState) {
@@ -19,8 +18,13 @@ fun Content(scrollState: LazyListState) {
             Description()
             ServingNumber()
             ShoppingListButton()
+
             SimilarFoodsHeader()
             SimilarFoods()
+
+            SimilarRecipesHeader()
+            SimilarRecipes()
+
 
         }
     }

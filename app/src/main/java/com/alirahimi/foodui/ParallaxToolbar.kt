@@ -21,6 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.alirahimi.foodui.ui.theme.LightGray
 import com.google.accompanist.insets.LocalWindowInsets
 import com.google.accompanist.insets.statusBarsPadding
@@ -69,12 +70,12 @@ fun ParallaxToolbar(scrollState: LazyListState) {
                     contentDescription = "",
                     contentScale = ContentScale.Crop,
                     modifier = Modifier
-                        .fillMaxWidth()
+                        .fillMaxSize()
                 )
 
                 Box(
                     modifier = Modifier
-                        .fillMaxWidth()
+                        .fillMaxSize()
                         .background(
                             brush = Brush.verticalGradient(
                                 colorStops = arrayOf(
@@ -110,6 +111,7 @@ fun ParallaxToolbar(scrollState: LazyListState) {
             ) {
                 Text(
                     text = "StrawBerry Cake",
+                    fontSize = 26.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
                         .padding(horizontal = (16 + 28 * offsetProgress).dp)
