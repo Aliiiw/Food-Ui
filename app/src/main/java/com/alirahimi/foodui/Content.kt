@@ -13,10 +13,13 @@ fun Content(scrollState: LazyListState) {
         state = scrollState,
     ) {
         item {
+
             BasicInformation()
             Description()
             ServingNumber()
             ShoppingListButton()
+            SimilarFoodsHeader()
+
         }
     }
 }
