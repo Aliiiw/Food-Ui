@@ -23,6 +23,7 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import com.alirahimi.foodui.ui.theme.LightGray
 import com.google.accompanist.insets.LocalWindowInsets
+import com.google.accompanist.insets.statusBarsPadding
 import kotlin.math.max
 import kotlin.math.min
 
@@ -55,6 +56,7 @@ fun ParallaxToolbar(scrollState: LazyListState) {
     ) {
 
         Column {
+
             Box(
                 modifier = Modifier
                     .height(imageHeight)
@@ -97,25 +99,39 @@ fun ParallaxToolbar(scrollState: LazyListState) {
                             .background(LightGray)
                             .padding(vertical = 6.dp, horizontal = 16.dp)
                     )
-
-
                 }
             }
-        }
 
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(appBarCollapseHeight),
-            verticalArrangement = Arrangement.Center
-        ) {
-            Text(
-                text = "StrawBerry Cake",
-                fontWeight = FontWeight.Bold,
+            Column(
                 modifier = Modifier
-                    .padding(horizontal = (16 + 28 * offsetProgress).dp)
-                    .scale(1f - 0.25f * offsetProgress)
-            )
+                    .fillMaxWidth()
+                    .height(appBarCollapseHeight),
+                verticalArrangement = Arrangement.Center
+            ) {
+                Text(
+                    text = "StrawBerry Cake",
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier
+                        .padding(horizontal = (16 + 28 * offsetProgress).dp)
+                        .scale(1f - 0.25f * offsetProgress)
+                )
+            }
         }
+    }
+
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .statusBarsPadding()
+            .height(appBarCollapseHeight)
+            .padding(horizontal = 16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.SpaceBetween
+    ) {
+
+        CircularButton(iconResource = R.drawable.ic_arrow_back)
+
+        CircularButton(iconResource = R.drawable.ic_favorite)
+
     }
 }
